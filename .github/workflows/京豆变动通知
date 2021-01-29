@@ -1,0 +1,25 @@
+name: 京豆变动通知
+
+on:
+    push:
+        branches:
+            - master
+    schedule:
+        - cron: '2 9 * * *'
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout codes
+              uses: actions/checkout@v2
+            - name: Use Node.js
+              uses: actions/setup-node@v1
+              with:
+                node-version: '12.x'
+            - name: Run jd_bean_change
+              run: npm install
+            - run: node jd_bean_change.js
+              env:
+                JD_COOKIE: ${{ secrets.JD_COOKIE }}
+                PUSH_KEY: ${{ secrets.PUSH_KEY }}
