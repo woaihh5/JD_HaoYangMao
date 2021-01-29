@@ -28,5 +28,5 @@ jobs:
         with:
           source_repo: "https://gitee.com/lxk0301/jd_scripts.git"
           source_branch: "master"
-          destination_branch: "master"
+          destination_branch: "main"
           github_token: ${{ secrets.PAT }}
