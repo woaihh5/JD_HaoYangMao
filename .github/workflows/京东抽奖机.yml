@@ -1,10 +1,10 @@
-name: 京东汽车
+name: 京东抽奖机
 on:
     push:
         branches:
             - master
     schedule:
-        - cron: '10 7 * * *'
+        - cron: '10 17 * * *'
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -16,9 +16,9 @@ jobs:
               uses: actions/setup-node@v1
               with:
                 node-version: '12.x'
-            - name: Run jd_car
+            - name: Run jd_lotteryMachine
               run: npm install
-            - run: node jd_car.js
+            - run: node jd_lotteryMachine.js
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
                 PUSH_KEY: ${{ secrets.PUSH_KEY }}
