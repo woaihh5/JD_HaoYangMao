@@ -18,8 +18,9 @@ jobs:
               uses: actions/setup-node@v1
               with:
                 node-version: '12.x'
-            - name: Run jd_syj
+            - name: Run '这是一个组合'
               run: npm install
+            - run: node jd_car.js
             - run: node jd_syj.js
             - run: node jd_crazy_joy.js
             - run: node jd_crazy_joy_coin.js
