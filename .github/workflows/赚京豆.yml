@@ -20,23 +20,8 @@ jobs:
             - name: Run jd_syj
               run: npm install
             - run: node jd_syj.js
-              env:
-                JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                PUSH_KEY: ${{ secrets.PUSH_KEY }}
-                
-            - name: Run jd_crazy_joy
             - run: node jd_crazy_joy.js
-              env:
-                JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                PUSH_KEY: ${{ secrets.PUSH_KEY }}
-                
-            - name: Run jd_crazy_joy_coin
             - run: node jd_crazy_joy_coin.js
-              env:
-                JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                PUSH_KEY: ${{ secrets.PUSH_KEY }}
-                
-            - name: Run jd_bean_home
             - run: node jd_bean_home.js
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
