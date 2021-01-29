@@ -20,29 +20,8 @@ jobs:
             - name: Run jd_redPacket
               run: npm install
             - run: node jd_redPacket.js
-              env:
-                JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                PUSH_KEY: ${{ secrets.PUSH_KEY }}
-                
-                
-            - name: Run jd_speed
-              run: npm install
             - run: node jd_speed.js
-              env:
-                JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                PUSH_KEY: ${{ secrets.PUSH_KEY }}
-                
-                
-            - name: Run jd_shop
-              run: npm install
             - run: node jd_shop.js
-              env:
-                JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                PUSH_KEY: ${{ secrets.PUSH_KEY }}
-                
-                
-            - name: Run jd_club_lottery
-              run: npm install
             - run: node jd_club_lottery.js
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
