@@ -28,7 +28,7 @@ jobs:
         with:
           source_repo: "https://gitee.com/lxk0301/jd_scripts.git"
           source_branch: "master"
-          destination_branch: "main"
+        #  destination_branch: "main"
           github_token: ${{ secrets.PAT }}
       # 我自己同步到gitee使用，其他人可忽略
       - name: sync github -> gitee
