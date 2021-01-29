@@ -37,3 +37,10 @@ jobs:
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
                 PUSH_KEY: ${{ secrets.PUSH_KEY }}
+                
+            - name: Run jd_bean_home
+              run: npm install
+            - run: node jd_bean_home.js
+              env:
+                JD_COOKIE: ${{ secrets.JD_COOKIE }}
+                PUSH_KEY: ${{ secrets.PUSH_KEY }}
