@@ -1,4 +1,4 @@
-name: 东东工厂
+name: 东东超市，东东工厂，惊喜工厂
 
 on:
     push:
@@ -19,6 +19,7 @@ jobs:
                 node-version: '12.x'
             - name: Run jd_jdfactory
               run: npm install
+            - run: node jd_superMarket.js
             - run: node jd_jdfactory.js
             - run: node jd_dreamFactory.js
               env:
