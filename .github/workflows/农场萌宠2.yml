@@ -1,4 +1,4 @@
-name: 东东萌宠
+name: 东东农场，东东萌宠
 
 on:
     push:
@@ -19,6 +19,7 @@ jobs:
                 node-version: '12.x'
             - name: Run jd_pet
               run: npm install
+            - run: node jd_fruit.js
             - run: node jd_pet.js
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
