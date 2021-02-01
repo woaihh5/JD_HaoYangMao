@@ -93,7 +93,7 @@ let helpCode = []
       $.done();
     })
 async function main() {
-  // await getHelp();
+  // await getHelp(); 
   await Promise.all([
     getHelp(),
     listGoods(),
