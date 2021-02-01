@@ -1,11 +1,11 @@
-name: 东东小窝
+name: 摇京豆，东东小窝
 
 on:
     push:
         branches:
             - master
     schedule:
-        - cron: '16 0 * * *'
+        - cron: '15 0 * * *'
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -19,6 +19,7 @@ jobs:
                 node-version: '12.x'
             - name: Run jd_small_home
               run: npm install
+            - run: node jd_club_lottery.js
             - run: node jd_small_home.js
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
