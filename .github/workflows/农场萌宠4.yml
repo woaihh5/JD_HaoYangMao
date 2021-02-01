@@ -1,4 +1,4 @@
-name: 东东农场，东东萌宠，手机狂欢城
+name: 东东农场，东东萌宠，手机狂欢城，费水果
 
 on:
     push:
@@ -22,6 +22,7 @@ jobs:
             - run: node jd_818.js
             - run: node jd_fruit.js
             - run: node jd_pet.js
+            - run: node jd_fruit.js
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
                 PUSH_KEY: ${{ secrets.PUSH_KEY }}
