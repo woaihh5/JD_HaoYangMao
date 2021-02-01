@@ -1,5 +1,5 @@
 # File: .github/workflows/赚京豆2.yml
-name: 赚京豆2
+name: 京东汽车，十元街，领京豆额外奖励
 
 on:
     push:
